@@ -2,7 +2,7 @@
 \usepackage{amssymb,amsmath,amsthm}
 \usepackage{newtxtt}
 \usepackage[utf8]{inputenc}
-\neqtheorem{th.}{Statement}
+\newtheorem{th.}{Statement}
 \newcommand{\pder}[2][]{\frac{\partial#1}{\partial#2}}
 \newcommand{\dder}[2][]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
 \newcommand{\ppder}[2][]{\frac{\partial^2#1}{{\partial#2}^2}}
@@ -26,9 +26,20 @@
     + \GaT{l}{#1}{#2}\GaT{m}{l}{m} - \GaT{m}{#1}{l}\GaT{l}{#2}{m}}
 \date{\today}
 \author{山田龍}
-\title{this is title}
+\title{波動関数の連続性について}
 \begin{document}
 \maketitle
+\section{波動関数は一価、連続、有限}
+粗めの議論：観測確率が有限、一価であることを要請すれば波動関数が有限で、一価であることがわかる。
 
+ちゃんと考えてみる。観測確率が有限であることは、
+\beq
+\int dx |\psi(x)|^2 < \infty
+\eeq
+つまり、確率密度の積分が有限であれば規格化してあげれば良いので物理的に意味がある。
+この条件を二乗可積分と呼ぶ。（以下証明がわからない）ここで入れたメトリックに対して関数の集合が完備距離空間を構成するのでヒルベルト空間になっているらしい。（微妙、追記する）
+
+少なくとも二乗可積分を波動関数に要請するのが正しいように思える。平面波が$exp(ikx)$の形に書かれるが、これは厳密に取り扱えばこの前提を満たさないが厳密に取り扱っていないのだろう。
+ほとんどの本でこのあたりはノータッチ、というか実りも特にないが、なので少し考えてみた。
 \end{document}
 
